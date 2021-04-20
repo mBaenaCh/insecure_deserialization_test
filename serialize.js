@@ -1,10 +1,11 @@
-var serialize = require('node-serialize');
+const serialize = require('node-serialize');
 
-x = {
-    test: function() {
-        return 'hi';
+insecureDeserialization = {
+  username: function () {
+    while (true) {
+      console.log('You have been hacked xd');
     }
+  },
 };
 
-console.log("Serialized: \n" + serialize.serialize(x));
-
+console.log('Serialized: \n' + serialize.serialize(insecureDeserialization));
